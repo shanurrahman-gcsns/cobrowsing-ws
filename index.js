@@ -47,6 +47,10 @@ io.on("connection", (socket) => {
     io.emit("agent_status", value);
   });
 
+  socket.on("SYNC_PREVIOUS_SESSIONS", (value) => {
+    io.emit("SYNC_PREVIOUS_SESSIONS", value);
+  });
+
   socket.on("disconnect", () => {
     console.log("user disconnected");
   });
