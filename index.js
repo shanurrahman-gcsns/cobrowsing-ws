@@ -48,6 +48,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("SYNC_PREVIOUS_SESSIONS", (value) => {
+    console.log("received sync values")
     io.emit("SYNC_PREVIOUS_SESSIONS", value);
   });
 
